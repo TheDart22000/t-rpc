@@ -18,6 +18,13 @@ app.get('/', (req, res) => {
 	res.send('Hello!')
 });
 
+app.get('/api/ping', (req, res) => {
+        res.json({
+		code: 200,
+		message: 'Pong!'
+	})
+});
+
 app.listen(PORT, () => {
 	console.log(`Started listening on port ${PORT}`);
 });
